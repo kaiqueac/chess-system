@@ -1,9 +1,11 @@
 package application;
 
+import chess.ChessException;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -75,7 +77,7 @@ public class UI {
             System.out.print(ANSI_BLUE_BACKGROUND);
         }
         if (piece == null) {
-            System.out.print("-");
+            System.out.print("-" + ANSI_RESET);
         }
         else {
             if (piece.getColor() == Color.WHITE) {
